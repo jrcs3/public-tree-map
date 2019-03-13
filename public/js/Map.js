@@ -10,7 +10,7 @@ var app = this.app || {};
     this.trees   = [];
 
     var map = L.map('map', {
-      center: [34.02, -118.48],
+      center: [47.657933,-117.423286],
       zoom: 14,
       layers: [
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -36,7 +36,7 @@ var app = this.app || {};
     this.trees.forEach((function(tree) {
       var marker = L.circleMarker([tree.latitude, tree.longitude], {
         renderer: RENDERER,
-        radius: 1,
+        radius: 2.25,
         stroke: false,
         fillOpacity: 1.0,
         fillColor: getFillColor(tree, palette)
